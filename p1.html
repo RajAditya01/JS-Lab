@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation and Word Count</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Age Validation and Word Count</h1>
+        
+        <form>
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="0" max="150">
+            <br>
+            <label for="description">Description Field:</label>
+            <textarea id="description"></textarea>
+            <br>
+            <button type="button" id="countButton">Count Words</button>
+        </form>
+        
+        <p id="result"></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const ageInput = document.getElementById('age');
+        const descriptionInput = document.getElementById('description');
+        const countButton = document.getElementById('countButton');
+        const resultElement = document.getElementById('result');
+
+        // Age validation
+        ageInput.addEventListener('blur', () => {
+            const age = parseInt(ageInput.value);
+            if (age <= 18) {
+                alert('Age must be greater than 18.');
+                ageInput.value = '';
+            }
+        });
+
+        // Word count calculation
+        countButton.addEventListener('click', () => {
+            const description = descriptionInput.value;
+            const wordCount = description.trim().split(/\s+/).filter(word => word !== '').length;
+            resultElement.textContent = `Word count: ${wordCount}`;
+        });
+    </script>
+</body>
+</html>
