@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Demonstration</title>
+</head>
+
+<body>
+    <button id="clickButton">Click Me</button>
+    <textarea id="textArea" cols="30" rows="10"></textarea>
+
+    <script>
+        const clickButton = document.getElementById("clickButton");
+        const textArea = document.getElementById("textArea");
+
+        // Click event handler
+        clickButton.addEventListener("click", function () {
+            textArea.value += "Button clicked!\n";
+        });
+
+        // Mouseenter event handler
+        textArea.addEventListener("mouseenter", function () {
+            textArea.value += "Mouse entered the textarea.\n";
+        });
+
+        // Mouseleave event handler
+        textArea.addEventListener("mouseleave", function () {
+            textArea.value += "Mouse left the textarea.\n";
+        });
+
+        // Keydown event handler
+        textArea.addEventListener("keydown", function (event) {
+            textArea.value += `Key pressed: ${event.key}\n`;
+        });
+
+    </script>
+</body>
+
+</html>
