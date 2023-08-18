@@ -39,3 +39,11 @@ takeExam()
     .catch(error => {
         console.error(error);
     });
+
+
+
+//In this code, the takeExam function returns a Promise that simulates whether you passed the exam or not. If you pass, it resolves with a success message; otherwise, it rejects with an error message.
+
+// The getNewMobile function returns a Promise that simulates getting a new mobile phone based on the exam result. It resolves if you passed with first class and rejects otherwise.
+
+// Using .then() and .catch(), we chain the Promises together to simulate the scenario. If you pass the exam with first class, you'll get a new mobile phone. Otherwise, you'll receive an appropriate error message.
