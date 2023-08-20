@@ -36,17 +36,17 @@ class Student {
 }
 
 // Create student instance and add marks and attendance
-const student = new Student(101, "Aditya", "Computer Science", 2, "India", "MMEC College");
-student.addMark(85);
+const student = new Student(11212714, "Aditya", "Computer Science", 3, "India", "MMEC College");
+student.addMark(95);
 student.addMark(90);
-student.addMark(78);
+student.addMark(98);
 student.addMark(92);
-student.addMark(88);
+student.addMark(100);
 student.addMark(95);
 
 student.addAttendance(true);
 student.addAttendance(true);
-student.addAttendance(false);
+student.addAttendance(true);
 student.addAttendance(true);
 student.addAttendance(true);
 student.addAttendance(true);
@@ -54,5 +54,5 @@ student.addAttendance(false);
 
 // Calculate and display average marks and attendance percentage
 console.log(`Student - ${student.name}`);
-console.log(`Average Marks: ${student.calculateAverage()}`);
+console.log(`Average Marks: ${student.calculateAverage()}%`);
 console.log(`Attendance Percentage: ${student.calculateAttendancePercentage()}%`);
